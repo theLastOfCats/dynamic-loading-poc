@@ -36,7 +36,7 @@ class Tool:
         }
 
         if resource_name not in modules:
-            raise ValueError("Module %s not found")
+            raise ValueError("Module %s not found", resource_name)
 
         spec = importlib.util.spec_from_file_location(
             resource_name, modules[resource_name]
